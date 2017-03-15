@@ -55,7 +55,6 @@ namespace asteroids
 
             Model newModel = Content.Load<Model>(assetName);
             textures = new Texture2D[newModel.Meshes.Count];
-            int i = 0;
 
 
 
@@ -72,7 +71,7 @@ namespace asteroids
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            skyboxModel = LoadModel("skyboxtextures/skybox", out skyboxTextures);
+            skyboxModel = LoadModel("skybox", out skyboxTextures);
             // TODO: use this.Content to load your game content here
             SpaceShip = Content.Load<Model>("ship");
             aspectRatio = graphics.GraphicsDevice.Viewport.AspectRatio;
@@ -147,7 +146,7 @@ namespace asteroids
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            
+            device.Clear(ClearOptions.Target | ClearOptions.DepthBuffer, Color.DarkSlateBlue, 1.0f, 0);
             DrawSkybox();
             // Copy any parent transforms.
             Matrix[] transforms = new Matrix[SpaceShip.Bones.Count];
@@ -189,20 +188,7 @@ namespace asteroids
 
             Matrix[] skyboxTransforms = new Matrix[skyboxModel.Bones.Count];
             skyboxModel.CopyAbsoluteBoneTransformsTo(skyboxTransforms);
-            int i = 0;
-            foreach (ModelMesh mesh in skyboxModel.Meshes)
-            {
-                foreach (Effect currentEffect in mesh.Effects)
-                {
-                    Matrix worldMatrix = skyboxTransforms[mesh.ParentBone.Index] * Matrix.CreateTranslation(modelPosition);
-                    currentEffect.CurrentTechnique = currentEffect.Techniques["Textured"];
-                    currentEffect.Parameters["xWorld"].SetValue(worldMatrix);
-                    currentEffect.Parameters["xView"].SetValue(viewMatrix);
-                    currentEffect.Parameters["xProjection"].SetValue(projectionMatrix);
-                    currentEffect.Parameters["xTexture"].SetValue(skyboxTextures[i++]);
-                }
-                mesh.Draw();
-            }
+
 
             dss = new DepthStencilState();
             dss.DepthBufferEnable = true;

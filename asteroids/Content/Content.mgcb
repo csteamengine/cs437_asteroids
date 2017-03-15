@@ -44,7 +44,7 @@
 /processorParam:TextureFormat=Color
 /build:wedge_p1_diff_v1.tga
 
-#begin skyboxtextures/skybox_back.JPG
+#begin clear_back.JPG
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -54,9 +54,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_back.JPG
+/build:clear_back.JPG
 
-#begin skyboxtextures/skybox_bottom.JPG
+#begin clear_front.JPG
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -66,9 +66,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_bottom.JPG
+/build:clear_front.JPG
 
-#begin skyboxtextures/skybox_front.JPG
+#begin clear_left.JPG
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -78,9 +78,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_front.JPG
+/build:clear_left.JPG
 
-#begin skyboxtextures/skybox_left.JPG
+#begin clear_right.JPG
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -90,9 +90,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_left.JPG
+/build:clear_right.JPG
 
-#begin skyboxtextures/skybox_right.JPG
+#begin clear_top.JPG
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -102,21 +102,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_right.JPG
+/build:clear_top.JPG
 
-#begin skyboxtextures/skybox_top.JPG
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:skyboxtextures/skybox_top.JPG
-
-#begin skyboxtextures/skybox.x
+#begin skybox.x
 /importer:OpenAssetImporter
 /processor:ModelProcessor
 /processorParam:ColorKeyColor=0,0,0,0
@@ -133,24 +121,5 @@
 /processorParam:Scale=1
 /processorParam:SwapWindingOrder=False
 /processorParam:TextureFormat=DxtCompressed
-/build:skyboxtextures/skybox.x
-
-#begin skyboxtextures/skybox2.x
-/importer:OpenAssetImporter
-/processor:ModelProcessor
-/processorParam:ColorKeyColor=0,0,0,0
-/processorParam:ColorKeyEnabled=True
-/processorParam:DefaultEffect=BasicEffect
-/processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
-/processorParam:PremultiplyTextureAlpha=True
-/processorParam:PremultiplyVertexColors=True
-/processorParam:ResizeTexturesToPowerOfTwo=False
-/processorParam:RotationX=0
-/processorParam:RotationY=0
-/processorParam:RotationZ=0
-/processorParam:Scale=1
-/processorParam:SwapWindingOrder=False
-/processorParam:TextureFormat=DxtCompressed
-/build:skyboxtextures/skybox2.x
+/build:skybox.x
 
